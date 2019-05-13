@@ -3,8 +3,6 @@ BattleCommand_Attract:
 	ld a, [wAttackMissed]
 	and a
 	jr nz, .failed
-	call CheckOppositeGender
-	jr c, .failed
 	call CheckHiddenOpponent
 	jr nz, .failed
 	ld a, BATTLE_VARS_SUBSTATUS1_OPP
